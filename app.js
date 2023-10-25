@@ -4,7 +4,8 @@ const cors = require("cors");
 const { API_VERSION } = require("./constants");
 const app = express();
 /* Cargar rutas */
-const authRoutes = require("./src/routes/auth");
+//const userRoutes = require("./src/routes/user");
+//const authRoutes = require("./src/routes/auth");
 /* const departamentoMunicipio = require("./src/routes/departamentoMunicipio"); */
 
 /* Trabajar con la extensión client-rest */
@@ -16,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 el backend y el front end a la vez */
 app.use(cors());
 console.log(`api/${API_VERSION}/`);
-app.use(`/api/${API_VERSION}`, authRoutes);
+app.use(`/api/${API_VERSION}`,userRoutes);
 /* app.use(`/api/${API_VERSION}/`, departamentoMunicipio);
 console.log(`/api/${API_VERSION}/datosabiertos`); */
 
